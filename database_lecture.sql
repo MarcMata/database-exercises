@@ -48,7 +48,6 @@ SET author_id = (
 ALTER TABLE quotes DROP COLUMN author;
 
 ALTER TABLE quotes
-    DROP FOREIGN KEY quotes_ibfk_1,
     ADD CONSTRAINT author_id_fk
         FOREIGN KEY (author_id)
             REFERENCES authors(id);
